@@ -8,9 +8,9 @@ use SocialSpy\BaseCommand;
 class CommandSpy extends BaseCommand {
 	public function __construct(Main $plugin){
         parent::__construct($plugin, "commandspy", "Spy on others commands!", "/commandspy", ['cmdspy']);
-        $this->setPermission("epFactions.commandspy");
+        $this->setPermission("socialspy.commandspy");
     }
-	public function execute(CommandSender $sender, $label, array $args){
+	public function execute(CommandSender $sender, string $label, array $args): bool{
 		if(!$this->testPermission($sender)){
 			$sender->sendMessage($this->prefix . "§cYou don't have permission for that!");
 			return true;
