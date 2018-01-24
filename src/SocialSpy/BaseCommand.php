@@ -10,7 +10,7 @@ abstract class BaseCommand extends Command implements PluginIdentifiableCommand 
 		parent::__construct($name, $desc, $usage, $aliases);
 		$this->plugin = $plugin;	
        }
-	public final function getPlugin(): Plugin{
+	public final function getPlugin(): BaseCommand{
 		return $this->plugin;
 	}
 }
