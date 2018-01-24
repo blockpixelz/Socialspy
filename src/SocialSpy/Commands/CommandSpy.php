@@ -4,7 +4,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as Text;
 use pocketmine\Player;
 use SocialSpy\Main;
-use SocialSpy\BaseCommnd;
+use SocialSpy\BaseCommand;
 class CommandSpy extends BaseCommand {
 	public function __construct(Main $plugin){
         parent::__construct($plugin, "commandspy", "Spy on others commands!", "/commandspy", ['cmdspy']);
