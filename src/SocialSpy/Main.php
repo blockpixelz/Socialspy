@@ -35,16 +35,5 @@ class Main extends PluginBase implements Listener {
                 $p->sendMessage(TextFormat::YELLOW . TextFormat::ITALIC . $e->getPlayer()->getName() . ": /" . $e->getMessage());
             }
         }
-        
-        public function hasCommandSpy($player) {
-            return in_array($player->getName(), $this->commandspy);
-        }
-    
-        public function disableCommandSpy($player) {
-            $this->commandspy[$player->getName()] = $player->getName();
-        }
-    
-        public function enableCommandSpy($player) {
-            unset($this->commandspy[$player->getName()]);
-        }
+    }
 }
